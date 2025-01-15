@@ -1,7 +1,7 @@
 package com.Volunteering_platform.Communityplatform.service;
 
 import com.Volunteering_platform.Communityplatform.model.user.User;
-import com.Volunteering_platform.Communityplatform.repository.UserRepository;
+import com.Volunteering_platform.Communityplatform.repository.user.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
