@@ -15,11 +15,13 @@ public class UserController {
 
     @PostMapping
     public User createUser(@RequestBody User user) {
+
         return userService.create(user);
     }
 
     @PutMapping("/edit")
     public User editUser(@RequestBody User user) {
+
         return userService.update(user);
     }
 
