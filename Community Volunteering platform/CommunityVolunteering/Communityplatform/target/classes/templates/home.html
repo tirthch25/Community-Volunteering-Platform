@@ -90,18 +90,44 @@
         text-align: center;
     }
   </style>
+  <style>
+    nav {
+        display: flex;
+        align-items: center;
+    }
+    nav a {
+        margin-right: 10px;
+    }
+    .search-button {
+        padding: 10px 20px;
+        font-size: 1em;
+        color: white;
+        background-color: #000407;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .search-button:hover {
+        background-color: #0056b3;
+    }
+  </style>
+
 </head>
 <body>
 
 <header>
   <div class="logo">Volunteer Platform</div>
   <nav>
-    <a th:href="@{'/jobs'}">Jobs</a>
+    <a th:href="@{/jobs}">Jobs</a>
     <a th:href="@{/login}">Login</a>
     <a th:href="@{/signup}">Sign Up</a>
     <a th:href="@{/get-involved}">Get Involved</a>
+    <!-- Search Button -->
+    <button class="search-button" th:onclick="window.location.href='@{/search}'">Search</button>
   </nav>
 </header>
+
 
 <section class="hero">
   <div class="hero-content">

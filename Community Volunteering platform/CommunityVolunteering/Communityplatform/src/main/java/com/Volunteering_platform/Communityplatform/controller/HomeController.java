@@ -16,6 +16,20 @@ public class HomeController {
     {
         return "login";
     }
-
+    @GetMapping("/jobs")
+    public  String jobs()
+    {
+        return "jobs";
+    }
+    @GetMapping("/signup")
+    public  String signup()
+    {
+        return "signup";
+    }
+    @GetMapping("/getinvolved")
+    public  String getinvolved()
+    {
+        return "get-involved";
+    }
 
 }
