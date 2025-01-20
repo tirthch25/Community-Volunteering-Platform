@@ -8,6 +8,14 @@ public class HomeController {
 
     @GetMapping("/")
     public String home() {
-        return "home"; // This will render the home.html template
+        return "home";
+        // This will render the home.html template
     }
+    @GetMapping("/jobs")
+    public String login()
+    {
+        return "login";
+    }
+
+
 }
