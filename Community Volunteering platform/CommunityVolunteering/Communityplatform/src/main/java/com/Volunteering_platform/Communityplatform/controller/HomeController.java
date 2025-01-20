@@ -11,7 +11,7 @@ public class HomeController {
         return "home";
         // This will render the home.html template
     }
-    @GetMapping("/jobs")
+    @GetMapping("/login")
     public String login()
     {
         return "login";
