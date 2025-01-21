@@ -1,7 +1,9 @@
 package com.Volunteering_platform.Communityplatform.controller;
 
+import ch.qos.logback.core.model.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+
 
 @Controller
 public class HomeController {
@@ -26,10 +28,15 @@ public class HomeController {
     {
         return "signup";
     }
-    @GetMapping("/getinvolved")
+    @GetMapping("/get-involved")
     public  String getinvolved()
     {
         return "get-involved";
+    }
+    @GetMapping("/search")
+    public String search(Model model) {
+        // Add logic here if needed (e.g., pass search data to the view)
+        return "search"; // Render the search.html page
     }
 
 }
