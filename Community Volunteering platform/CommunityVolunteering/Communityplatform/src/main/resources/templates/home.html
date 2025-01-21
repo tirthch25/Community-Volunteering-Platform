@@ -123,8 +123,8 @@
     <a th:href="@{/login}">Login</a>
     <a th:href="@{/signup}">Sign Up</a>
     <a th:href="@{/get-involved}">Get Involved</a>
-    <!-- Search Button -->
-    <button class="search-button" th:onclick="window.location.href='@{/search}'">Search</button>
+   <a class="search-button" th:href="@{/search}">search</a>
+
   </nav>
 </header>
 
@@ -133,7 +133,7 @@
   <div class="hero-content">
     <h1>Welcome to Volunteer Platform!</h1>
     <p>Make a difference in your community today.</p>
-    <button th:onclick="window.location.href='@{/get-involved}'">Get Involved</button>
+    <button ><a  th:href="@{/get-involved}"> Get Involved</a></button>
     <button th:onclick="window.location.href='@{/learn-more}'">Learn More</button>
   </div>
 </section>
