@@ -18,10 +18,10 @@ public class HomeController {
     {
         return "login";
     }
-    @GetMapping("/jobs")
-    public  String jobs()
+    @GetMapping("/userregistration")
+    public  String userregistration()
     {
-        return "jobs";
+        return "userregistration";
     }
     @GetMapping("/signup")
     public  String signup()
