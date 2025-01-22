@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,9 +120,11 @@
 <header>
   <div class="logo">Volunteer Platform</div>
   <nav>
-    <a th:href="@{/userregistration}">user Registration</a>
+    <a th:href="@{/home}">Home</a>
+    <a th:href="@{/index}">User Registration</a>
     <a th:href="@{/login}">Login</a>
     <a th:href="@{/signup}">Sign Up</a>
+    <a th:href="@{/rating}">Rating</a>
     <a th:href="@{/get-involved}">Get Involved</a>
     <a class="search-button" th:href="@{/search}">search</a>
 

@@ -18,10 +18,10 @@ public class HomeController {
     {
         return "login";
     }
-    @GetMapping("/userregistration")
-    public  String userregistration()
+    @GetMapping("/index")
+    public  String index()
     {
-        return "userregistration";
+        return "index";
     }
     @GetMapping("/signup")
     public  String signup()
@@ -37,6 +37,16 @@ public class HomeController {
     public String search(Model model) {
         // Add logic here if needed (e.g., pass search data to the view)
         return "search"; // Render the search.html page
+    }
+    @GetMapping("/rating")
+    public String rating()
+    {
+        return "rating";
+    }
+    @GetMapping("/home")
+    public String shome()
+    {
+        return "home";
     }
 
 }
