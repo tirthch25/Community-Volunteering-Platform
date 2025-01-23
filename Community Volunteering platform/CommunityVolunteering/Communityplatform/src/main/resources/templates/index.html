@@ -1,34 +1,172 @@
 <!DOCTYPE html>
-<html lang="en"
-      xmlns:th="https://www.thymeleaf.org"
->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Volunteering - Registration Form</title>
-<!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">-->
-    <link th:href="@{/css/style.css}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
+        header {
+            background-color: #6b8cb3;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        #user-reg {
+            font-weight: bold;
+            text-decoration: underline;
+            transform: scale(1.0);
+        }
+
+        #btn :hover {
+            background-color: #1a3a60;
+            font-weight: bolder;
+            color: white;
+            transform: scale(1.0);
+            transition: font-size 0.5s ease-in 0.1s;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 25%;
+            background: #e2e2e2;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .sidebar ul li:hover {
+            background: #d1d1d1;
+        }
+
+        #reg-form {
+            background: #d1d1d1;
+        }
+
+        .form {
+            width: 70%;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #285c84;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+            clear: both;
+        }
+    </style>
+    <style>
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            margin-right: 10px;
+        }
+        .search-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #000407;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
+
 <header>
-    <div class="container">
-        <div class="logo">
-            <h1>Community Volunteering</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#" >Home</a></li>
-                <li id="user-reg"><a href="#">User  Registration</a></li>
-                <li><a href="#">Volunteer Opportunities</a></li>
-                <li><a href="#">Search & Filter</a></li>
-                <li><a href="#">SignUp</a></li>
-                <li><a href="#">Rating</a></li>
-                <li id="btn"><button>Get Involved</button></li>
-            </ul>
-        </nav>
-    </div>
+    <div class="logo">Volunteer Platform</div>
+    <nav>
+        <a th:href="@{/home}">Home</a>
+        <a th:href="@{/index}">User Registration</a>
+        <a th:href="@{/login}">Login</a>
+        <a th:href="@{/signup}">Sign Up</a>
+        <a th:href="@{/rating}">Rating</a>
+        <a th:href="@{/get-involved}">Get Involved</a>
+        <a class="search-button" th:href="@{/search}">search</a>
+    </nav>
 </header>
 
 <main>
@@ -40,37 +178,27 @@
                         <li><i class="fas fa-user"></i> User Registration</li>
                         <li id="reg-form">
                             <a href="index.html">
-                                <i class="fas fa-edit">
-                                    Registration Form
-                                </i>
+                                <i class="fas fa-edit"> Registration Form</i>
                             </a>
                         </li>
                         <li>
                             <a href="UpdateProfile.html">
-                                <i class="fas fa-edit">
-                                    Update Profile
-                                </i>
+                                <i class="fas fa-edit"> Update Profile</i>
                             </a>
                         </li>
                         <li>
                             <a href="ViewVolun.html">
-                                <i class="fas fa-users">
-                                    View Volunteers
-                                </i>
+                                <i class="fas fa-users"> View Volunteers</i>
                             </a>
                         </li>
                         <li>
                             <a href="ViewOrg.html">
-                                <i class="fas fa-building">
-                                    View Organization
-                                </i>
+                                <i class="fas fa-building"> View Organization</i>
                             </a>
                         </li>
                         <li>
                             <a href="DeleteAcc.html">
-                                <i class="fas fa-trash-alt">
-                                    Delete Account
-                                </i>
+                                <i class="fas fa-trash-alt"> Delete Account</i>
                             </a>
                         </li>
                     </ul>
@@ -118,5 +246,6 @@
 <footer>
     <p>&copy; 2023 Community Volunteering</p>
 </footer>
+
 </body>
 </html>

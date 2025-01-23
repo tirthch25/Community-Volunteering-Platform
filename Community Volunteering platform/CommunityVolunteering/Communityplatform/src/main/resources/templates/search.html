@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,32 @@
         background-color: #f5f7fa;
         min-height: 100vh;
         padding: 2rem;
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        background-color: #6b8cb3;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    header nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+        font-size: 1em;
+    }
+
+    header nav a:hover {
+        text-decoration: underline;
     }
 
     .container {
@@ -183,6 +209,20 @@
   </style>
 </head>
 <body>
+
+<header>
+  <div class="logo">Volunteer Platform</div>
+  <nav>
+    <a th:href="@{/home}">Home</a>
+    <a th:href="@{/index}">User Registration</a>
+    <a th:href="@{/login}">Login</a>
+    <a th:href="@{/signup}">Sign Up</a>
+    <a th:href="@{/rating}">Rating</a>
+    <a th:href="@{/get-involved}">Get Involved</a>
+    <a class="search-button" th:href="@{/search}">Search</a>
+  </nav>
+</header>
+
 <div class="container">
   <div class="header">
     <h1>Find Volunteer Opportunities</h1>
@@ -289,5 +329,6 @@
     </div>
   </div>
 </div>
+
 </body>
 </html>

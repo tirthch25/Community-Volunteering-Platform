@@ -18,6 +18,7 @@ public class HomeController {
     {
         return "login";
     }
+
     @GetMapping("/index")
     public  String index()
     {
@@ -47,6 +48,26 @@ public class HomeController {
     public String shome()
     {
         return "home";
+    }
+    @GetMapping("/DeleteAcc")
+    public  String DeleteAcc()
+    {
+        return "DeleteAcc";
+    }
+    @GetMapping("/UpdateProfile")
+    public String UpdateProfile ()
+    {
+        return "UpdateProfile" ;
+    }
+    @GetMapping("/ViewOrg")
+    public String ViewOrg()
+    {
+        return "ViewOrg";
+    }
+    @GetMapping("/ViewVolun")
+    public String ViewVolun()
+    {
+        return "ViewVolun";
     }
 
 }

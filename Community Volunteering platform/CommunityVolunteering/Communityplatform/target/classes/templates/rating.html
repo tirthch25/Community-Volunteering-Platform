@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +19,45 @@
             justify-content: center;
             align-items: center;
             padding: 2rem;
+        }
+         header {
+            background-color: #6b8cb3;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 1em;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            margin-top: 80px; /* Adjust to avoid overlap with fixed header */
         }
 
         .container {
@@ -201,6 +239,19 @@
     </style>
 </head>
 <body>
+<header>
+    <div class="logo">Volunteer Platform</div>
+    <nav>
+        <a th:href="@{/home}">Home</a>
+        <a th:href="@{/index}">User Registration</a>
+        <a th:href="@{/login}">Login</a>
+        <a th:href="@{/signup}">Sign Up</a>
+        <a th:href="@{/rating}">Rating</a>
+        <a th:href="@{/get-involved}">Get Involved</a>
+        <a class="search-button" th:href="@{/search}">search</a>
+
+    </nav>
+</header>
 <div class="container">
     <div class="header">
         <h2>Rate Your Volunteer Experience</h2>
@@ -258,7 +309,9 @@
 
             <div class="form-group">
                 <label>Share your detailed feedback</label>
-                <textarea placeholder="Tell us about your experience..."></textarea>
+                <label>
+                    <textarea placeholder="Tell us about your experience..."></textarea>
+                </label>
             </div>
         </div>
     </div>

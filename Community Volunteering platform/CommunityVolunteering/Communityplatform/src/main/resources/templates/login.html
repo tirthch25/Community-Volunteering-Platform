@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +13,43 @@
         }
 
         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
             background: linear-gradient(135deg, #83a4d4, #b6fbff);
             min-height: 100vh;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+        }
+
+        header {
+            background-color: #6b8cb3;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #cce7ff;
         }
 
         .container {
@@ -129,14 +161,53 @@
         }
 
         @media (max-width: 480px) {
+            header {
+                padding: 10px 20px;
+            }
+
             .container {
                 margin: 1rem;
                 padding: 1.5rem;
             }
         }
     </style>
+    <style>
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            margin-right: 10px;
+        }
+        .search-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #000407;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
+<header>
+    <div class="logo">Volunteer Platform</div>
+    <nav>
+        <a th:href="@{/home}">Home</a>
+        <a th:href="@{/index}">User Registration</a>
+        <a th:href="@{/login}">Login</a>
+        <a th:href="@{/signup}">Sign Up</a>
+        <a th:href="@{/rating}">Rating</a>
+        <a th:href="@{/get-involved}">Get Involved</a>
+        <a class="search-button" th:href="@{/search}">Search</a>
+    </nav>
+</header>
+
 <div class="container">
     <div class="header">
         <h1>Welcome Back!</h1>
