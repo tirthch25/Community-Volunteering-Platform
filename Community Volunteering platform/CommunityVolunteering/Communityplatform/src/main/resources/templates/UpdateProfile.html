@@ -7,12 +7,13 @@
     <title>Community Volunteering - Update Profile</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
- header {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
             background-color: #6b8cb3;
             color: white;
             padding: 15px 30px;
@@ -33,251 +34,198 @@
             font-size: 1em;
         }
 
-a {
-    text-decoration: none; 
-    color: black; 
-}
-.container {
-    width: 80%;
-    margin: auto;
-}
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
-}
+        header nav a:hover {
+            text-decoration: underline;
+        }
 
-header .logo h1 {
-    margin: 0;
-    padding: 0;
-}
+        .container {
+            width: 80%;
+            margin: auto;
+        }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-nav ul li a:hover {
-    text-decoration: underline;
-    transition: transform 0.3s ease, font-weight 0.3 ease;
-    font-weight: bold;
-}
-
-#user-reg{
-    font-weight: bold;
-    text-decoration: underline;
-    transform: scale(1.0);
-}
-
-#bton :hover {
-    background-color: #1a3a60 ;
-    font-weight: bolder;
-    color: white;
-    transform: scale(1.0);
-    transition: font-size 0.5s ease-in 0.1s;
-}
-.flex-container {
-    display: flex;
-}
-
-.sidebar {
-    width:25%;
-    background: #e2e2e2;
-    padding: 20px;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.sidebar ul li:hover {
-    background: #d1d1d1;
-}
-
-#update-prof{
-    background: #d1d1d1;
-}
-.form {
-    width: 70%;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-textarea:focus {
-    border-color: #1a3a60; 
-    outline: none;
-}
-
-.btn {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.btn:hover {
-    background: #285c84;
-
-}
-    </style>
-    <style>
-        nav {
+        .flex-container {
             display: flex;
-            align-items: center;
         }
-        nav a {
-            margin-right: 10px;
+
+        .sidebar {
+            width: 25%;
+            background: #e2e2e2;
+            padding: 20px;
         }
-        .search-button {
-            padding: 10px 20px;
-            font-size: 1em;
-            color: white;
-            background-color: #000407;
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .sidebar ul li:hover {
+            background: #d1d1d1;
+        }
+
+        #update-prof {
+            background: #d1d1d1;
+        }
+
+        .form {
+            width: 70%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            border-color: #1a3a60;
+            outline: none;
+        }
+
+        .btn {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 15px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
-        .search-button:hover {
-            background-color: #0056b3;
+
+        .btn:hover {
+            background: #285c84;
+        }
+         footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #6b8cb3;
+            color: #ffffff;
+            clear: both;
         }
     </style>
 </head>
 <body>
-    <header>
-            <div class="logo">Volunteer Platform</div>
-            <nav>
-                <a th:href="@{/home}">Home</a>
-                <a th:href="@{/index}">User Registration</a>
-                <a th:href="@{/login}">Login</a>
-                <a th:href="@{/signup}">Sign Up</a>
-                <a th:href="@{/rating}">Rating</a>
-                <a th:href="@{/get-involved}">Get Involved</a>
-                <a class="search-button" th:href="@{/search}">search</a>
-            </nav>
-    </header>
+<!-- Updated Header -->
+<header>
+    <div class="logo">Volunteer Platform</div>
+    <nav>
+        <a th:href="@{/home}">Home</a>
+        <a th:href="@{/index}">User Registration</a>
+        <a th:href="@{/login}">Login</a>
+        <a th:href="@{/signup}">Sign Up</a>
+        <a th:href="@{/rating}">Rating</a>
+        <a th:href="@{/get-involved}">Get Involved</a>
+        <a class="search-button" th:href="@{/search}">Search</a>
+    </nav>
+</header>
 
-    <main>
-        <section class="registration">
-            <div class="container">
-                <div class="flex-container">
-                    <div class="sidebar">
-                        <ul>
-                            <li><i class="fas fa-user"></i> User Registration</li>
-                            <li>
-                                <a href="index.html">
-                                    <i class="fas fa-edit">
-                                        Registration Form
-                                    </i> 
-                                </a>
-                            </li>
-                            <li id="update-prof"><i class="fas fa-edit"></i> Update Profile</li>
-                            <li>
-                                <a href="ViewVolun.html">
-                                    <i class="fas fa-users">
-                                        View Volunteers
-                                    </i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="ViewOrg.html">
-                                    <i class="fas fa-building">
-                                        View Organization
-                                    </i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="DeleteAcc.html">
-                                    <i class="fas fa-trash-alt">
-                                        Delete Account
-                                    </i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="form">
-                        <h1>Update Your Profile</h1>
-                        <form action="#">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                            <div class="form-group">
-                                <label for="skills">Skills</label>
-                                <input type="text" id="skills" name="skills" placeholder="e.g., First Aid, Teaching">
-                            </div>
-                            <div class="form-group">
-                                <label for="gender">Gender</label>
-                                <select id="gender" name="gender" required>
-                                    <option value="">Select Gender</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn">Update Profile</button>
-                        </form>
-                    </div>
+<main>
+    <section class="registration">
+        <div class="container">
+            <div class="flex-container">
+                <div class="sidebar">
+                    <ul>
+                        <li><i class="fas fa-user"></i> User Registration</li>
+                        <li>
+                            <a href="index.html">
+                                <i class="fas fa-edit">
+                                    Registration Form
+                                </i>
+                            </a>
+                        </li>
+                        <li id="update-prof"><i class="fas fa-edit"></i> Update Profile</li>
+                        <li>
+                            <a href="ViewVolun.html">
+                                <i class="fas fa-users">
+                                    View Volunteers
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ViewOrg.html">
+                                <i class="fas fa-building">
+                                    View Organization
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="DeleteAcc.html">
+                                <i class="fas fa-trash-alt">
+                                    Delete Account
+                                </i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form">
+                    <h1>Update Your Profile</h1>
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="skills">Skills</label>
+                            <input type="text" id="skills" name="skills" placeholder="e.g., First Aid, Teaching">
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn">Update Profile</button>
+                    </form>
                 </div>
             </div>
-        </section>
-    </main>
-    
+        </div>
+    </section>
+</main>
+<footer>
+    <p>© 2025 Volunteer Platform. All Rights Reserved. | <a th:href="@{/privacy-policy}">Privacy Policy</a></p>
+    <p>Follow us on Intagram | X | Facebook </p>
+</footer>
 </body>
 </html>

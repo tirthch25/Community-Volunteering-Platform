@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community Volunteering - View Organizations</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <style>
-    body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
- header {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Volunteering - View Organizations</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        header {
             background-color: #6b8cb3;
             color: white;
             padding: 15px 30px;
@@ -33,170 +35,110 @@
             font-size: 1em;
         }
 
-a {
-    text-decoration: none; 
-    color: black; 
-}
-.container {
-    width: 80%;
-    margin: auto;
-}
+        header nav a:hover {
+            text-decoration: underline;
+        }
 
-#org-logo{
-    margin-left: 1%;
-    align-items: center;
-}
+        a {
+            text-decoration: none;
+            color: black;
+        }
 
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
-}
+        .container {
+            width: 80%;
+            margin: auto;
+        }
 
-header .logo h1 {
-    margin: 0;
-    padding: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-nav ul li a:hover {
-    text-decoration: underline;
-    transition: transform 0.3s ease, font-weight 0.3 ease;
-    font-weight: bold;
-}
-
-#user-reg{
-    font-weight: bold;
-    text-decoration: underline;
-    transform: scale(1.0);
-}
-
-#btn :hover {
-    background-color: #1a3a60 ;
-    font-weight: bolder;
-    color: white;
-    transform: scale(1.0);
-    transition: font-size 0.5s ease-in 0.1s;
-}
-
-.flex-container {
-    display: flex;
-}
-
-.sidebar {
-    width:20%;
-    background: #e2e2e2;
-    padding: 20px;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.sidebar ul li:hover {
-    background: #d1d1d1;
-}
-   
-#view-org{
-    background: #d1d1d1;
-}
-
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    background-color: #ffffff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-table th,
-table td {
-    text-align: left;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    font-size: 1em;
-}
-
-thead th {
-    background-color: #35424a; 
-    color: #ffffff;
-    font-weight: bold;
-    text-transform: uppercase; 
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #f4f4f4; 
-}
-
-tbody tr:nth-child(even) {
-    background-color: #ffffff; 
-}
-
-tbody tr:hover {
-    background-color: #e0f7fa; 
-    cursor: pointer;
-    transition: background-color 0.3s ease; 
-}
-
-tfoot {
-    background-color: #1a3a60; 
-    color: #ffffff;
-    font-weight: bold;
-    text-align: center;
-}
-
-.container > .flex-container > div {
-    margin-bottom: 20px; 
-}
-
-.container > .flex-container > div:not(:last-child) {
-    margin-right: 20px;
-}
-  </style>
-    <style>
-        nav {
-            display: flex;
+        #org-logo {
+            margin-left: 1%;
             align-items: center;
         }
-        nav a {
-            margin-right: 10px;
+
+        .flex-container {
+            display: flex;
         }
-        .search-button {
-            padding: 10px 20px;
-            font-size: 1em;
-            color: white;
-            background-color: #000407;
-            border: none;
-            border-radius: 5px;
+
+        .sidebar {
+            width: 20%;
+            background: #e2e2e2;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
-        .search-button:hover {
-            background-color: #0056b3;
+
+        .sidebar ul li:hover {
+            background: #d1d1d1;
         }
+
+        #view-org {
+            background: #d1d1d1;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table th,
+        table td {
+            text-align: left;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            font-size: 1em;
+        }
+
+        thead th {
+            background-color: #35424a;
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f4f4f4;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        tbody tr:hover {
+            background-color: #e0f7fa;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        tfoot {
+            background-color: #1a3a60;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .container > .flex-container > div {
+            margin-top: 13px;
+            margin-bottom: 20px;
+        }
+
+        .container > .flex-container > div:not(:last-child) {
+            margin-right: 20px;
+        }
+
     </style>
 </head>
 <body>
+
 <header>
     <div class="logo">Volunteer Platform</div>
     <nav>
@@ -206,95 +148,65 @@ tfoot {
         <a th:href="@{/signup}">Sign Up</a>
         <a th:href="@{/rating}">Rating</a>
         <a th:href="@{/get-involved}">Get Involved</a>
-        <a class="search-button" th:href="@{/search}">search</a>
+        <a class="search-button" th:href="@{/search}">Search</a>
     </nav>
 </header>
 
-    <main>
-        <section class="registration">
-            <div class="container">
-                <div class="flex-container">
-                    <div class="sidebar">
-                        <ul>
-                            <li><i class="fas fa-user"></i> User Registration</li>
-                            <li>
-                                <a href="index.html">
-                                    <i class="fas fa-edit">
-                                        Registration Form
-                                    </i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="UpdateProfile.html">
-                                    <i class="fas fa-edit">
-                                        Update Profile
-                                    </i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="ViewVolun.html">
-                                    <i class="fas fa-users">
-                                        View Volunteers
-                                    </i>
-                                </a>
-                            </li>
-                            <li id="view-org">
-                                <a href="ViewOrg.html">
-                                    <i class="fas fa-building">
-                                        View Organization
-                                    </i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="DeleteAcc.html">
-                                    <i class="fas fa-trash-alt">
-                                        Delete Account
-                                    </i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="container">
-                        <header class="header">
-                        <h1 id="org-logo"><i class="fas fa-building"></i> View Organizations</h1>
-                        </header>
-                        <main>
+<main>
+    <section class="registration">
+        <div class="container">
+            <div class="flex-container">
+                <div class="sidebar">
+                    <ul>
+                        <li><i class="fas fa-user"></i> User Registration</li>
+                        <li>
+                            <a href="index.html">
+                                <i class="fas fa-edit"></i> Registration Form
+                            </a>
+                        </li>
+                        <li>
+                            <a href="UpdateProfile.html">
+                                <i class="fas fa-edit"></i> Update Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ViewVolun.html">
+                                <i class="fas fa-users"></i> View Volunteers
+                            </a>
+                        </li>
+                        <li id="view-org">
+                            <a href="ViewOrg.html">
+                                <i class="fas fa-building"></i> View Organization
+                            </a>
+                        </li>
+                        <li>
+                            <a href="DeleteAcc.html">
+                                <i class="fas fa-trash-alt"></i> Delete Account
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <header class="header">
+                        <h1 id="org-logo"><i class="fas fa-users"></i> View Organizations</h1>
+                    </header>
+                    <main>
                         <table>
                             <thead>
                             <tr>
                                 <th>Id</th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Contact</th>
+                                <th>Phone number</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Red Cross</td>
-                                <td>redcross@ac.in</td>
-                                <td>01329</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Meals on Wheels</td>
-                                <td>mealsonwheels@ac.in</td>
-                                <td>02474</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Operation Smile</td>
-                                <td>operationsmile@ac.in</td>
-                                <td>08433</td>
-                            </tr>
-                            </tbody>
+
                         </table>
-                        </main>
-                    </div>
+                    </main>
                 </div>
             </div>
-        </section>
-    </main>
-    
+        </div>
+    </section>
+</main>
 </body>
 </html>
