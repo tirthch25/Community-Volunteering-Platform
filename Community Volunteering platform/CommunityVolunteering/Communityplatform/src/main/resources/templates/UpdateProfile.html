@@ -144,6 +144,7 @@
         <a th:href="@{/index}">User Registration</a>
         <a th:href="@{/login}">Login</a>
         <a th:href="@{/signup}">Sign Up</a>
+        <a th:href="@{/task-creation}">Task Creation</a>
         <a th:href="@{/rating}">Rating</a>
         <a th:href="@{/get-involved}">Get Involved</a>
         <a class="search-button" th:href="@{/search}">Search</a>
@@ -156,35 +157,20 @@
             <div class="flex-container">
                 <div class="sidebar">
                     <ul>
-                        <li><i class="fas fa-user"></i> User Registration</li>
                         <li>
-                            <a href="index.html">
-                                <i class="fas fa-edit">
-                                    Registration Form
-                                </i>
-                            </a>
-                        </li>
-                        <li id="update-prof"><i class="fas fa-edit"></i> Update Profile</li>
-                        <li>
-                            <a href="ViewVolun.html">
-                                <i class="fas fa-users">
-                                    View Volunteers
-                                </i>
-                            </a>
+                            <a th:href="@{/index}"><i class="fas fa-edit"> Registration Form</i></a>
                         </li>
                         <li>
-                            <a href="ViewOrg.html">
-                                <i class="fas fa-building">
-                                    View Organization
-                                </i>
-                            </a>
+                            <a th:href="@{/UpdateProfile}"><i class="fas fa-edit"> Update Profile</i></a>
                         </li>
                         <li>
-                            <a href="DeleteAcc.html">
-                                <i class="fas fa-trash-alt">
-                                    Delete Account
-                                </i>
-                            </a>
+                            <a th:href="@{/ViewVolun}"><i class="fas fa-users"> View Volunteers</i></a>
+                        </li>
+                        <li>
+                            <a th:href="@{/ViewOrg}"><i class="fas fa-building"> View Organization</i></a>
+                        </li>
+                        <li>
+                            <a th:href="@{/DeleteAcc}"><i class="fas fa-trash-alt"> Delete Account</i></a>
                         </li>
                     </ul>
                 </div>
