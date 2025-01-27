@@ -56,12 +56,11 @@
         <a th:href="@{/task-creation}">Task Creation</a>
         <a th:href="@{/rating}">Rating</a>
         <a th:href="@{/get-involved}">Get Involved</a>
-
         <a class="search-button" th:href="@{/search}">Search</a>
     </nav>
 </header>
 
-<div class="container mt-4">
+<div class="container mt-4 mb-5"> <!-- Added mb-5 for spacing -->
     <h3>Create a New Task</h3>
     <form method="POST" th:action="@{/task-creation}">
         <!-- Task Name -->

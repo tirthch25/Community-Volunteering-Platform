@@ -50,9 +50,8 @@ public class HomeController {
         return "home";
     }
     @GetMapping("/DeleteAcc")
-    public  String DeleteAcc()
-    {
-        return "DeleteAcc";
+    public String DeleteAcc() {
+        return "DeleteAcc"; // This corresponds to DeleteAcc.html
     }
     @GetMapping("/UpdateProfile")
     public String UpdateProfile ()
@@ -69,4 +68,14 @@ public class HomeController {
     {
         return "ViewVolun";
     }
+
+    // new addition
+
+    @GetMapping("/task-creation")
+    public String taskCreationForm() {
+        return "task-creation"; // Returns the Thymeleaf template for Task Creation
+    }
+
+
+
 }
