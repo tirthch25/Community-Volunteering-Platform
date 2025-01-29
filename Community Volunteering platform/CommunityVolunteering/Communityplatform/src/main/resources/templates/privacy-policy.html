@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Community Volunteer Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #6b8cb3;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 1em;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        h1, h2 {
+            color: #35424a;
+        }
+
+        .policy-section {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #6b8cb3;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+    </style>
+    <style>
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            margin-right: 10px;
+        }
+        .search-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #000407;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Volunteer Platform</div>
+    <nav>
+        <a th:href="@{/home}">Home</a>
+        <a th:href="@{/index}">User Registration</a>
+        <a th:href="@{/login}">Login</a>
+        <a th:href="@{/signup}">Sign Up</a>
+        <a th:href="@{/task-creation}">Task Creation</a>
+        <a th:href="@{/rating}">Rating</a>
+        <a th:href="@{/get-involved}">Get Involved</a>
+        <a class="search-button" th:href="@{/search}">Search</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Privacy Policy</h1>
+    <p>Last updated: January 2025</p>
+
+    <div class="policy-section">
+        <h2>1. Introduction</h2>
+        <p>Welcome to the Community Volunteer Platform. Your privacy is important to us, and we are committed to protecting your personal information.</p>
+    </div>
+
+    <div class="policy-section">
+        <h2>2. Information We Collect</h2>
+        <p>We collect personal data such as your name, email, phone number, and other relevant information when you register or participate in volunteering activities.</p>
+    </div>
+
+    <div class="policy-section">
+        <h2>3. How We Use Your Information</h2>
+        <p>We use your information to connect you with volunteering opportunities, improve our services, and communicate with you regarding platform updates.</p>
+    </div>
+
+    <div class="policy-section">
+        <h2>4. Data Protection</h2>
+        <p>We take appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.</p>
+    </div>
+
+    <div class="policy-section">
+        <h2>5. Sharing of Information</h2>
+        <p>We do not sell or share your personal data with third parties except when required by law or for the purpose of providing volunteering services.</p>
+    </div>
+
+    <div class="policy-section">
+        <h2>6. Your Rights</h2>
+        <p>You have the right to access, update, or delete your personal data. Contact us if you wish to make changes or request data removal.</p>
+    </div>
+
+    <div class="policy-section">
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions about our Privacy Policy, please contact us at <strong>support@volunteerplatform.com</strong>.</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Volunteer Platform. All Rights Reserved. | <a th:href="@{/privacy-policy}">Privacy Policy</a></p>
+    <p>Follow us on Instagram | X | Facebook</p>
+</footer>
+
+</body>
+</html>

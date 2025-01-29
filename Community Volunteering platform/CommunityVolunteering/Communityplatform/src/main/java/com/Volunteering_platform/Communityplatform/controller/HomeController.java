@@ -81,4 +81,9 @@ public class HomeController {
     {
         return "learnmore";
     }
+    @GetMapping("/privacy-policy")
+    public String privacypolicy()
+    {
+        return "privacy-policy";
+    }
 }
