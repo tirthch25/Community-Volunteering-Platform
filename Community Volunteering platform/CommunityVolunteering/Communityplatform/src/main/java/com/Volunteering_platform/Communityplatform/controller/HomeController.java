@@ -76,6 +76,9 @@ public class HomeController {
         return "task-creation"; // Returns the Thymeleaf template for Task Creation
     }
 
-
-
+    @GetMapping("/learnmore")
+    public String learnmore()
+    {
+        return "learnmore";
+    }
 }
