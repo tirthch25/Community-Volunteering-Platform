@@ -3,6 +3,7 @@ package com.Volunteering_platform.Communityplatform.controller;
 import ch.qos.logback.core.model.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 
 @Controller
@@ -51,11 +52,13 @@ public class HomeController {
     }
     @GetMapping("/DeleteAcc")
     public String DeleteAcc() {
+
         return "DeleteAcc"; // This corresponds to DeleteAcc.html
     }
     @GetMapping("/UpdateProfile")
     public String UpdateProfile ()
     {
+
         return "UpdateProfile" ;
     }
     @GetMapping("/ViewOrg")
@@ -84,6 +87,13 @@ public class HomeController {
     @GetMapping("/privacy-policy")
     public String privacypolicy()
     {
+
         return "privacy-policy";
+    }
+
+    @PostMapping("/signUpProcess")
+    public String signUpProcess()
+    {
+        return "redirect:/home";
     }
 }
